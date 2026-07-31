@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置后台 - 我们的小世界</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="topbar">
+        <div>
+            <span class="title">💕 我们的小世界 · 配置后台</span>
+            <span class="hint">保存会直接写入 js/config.js（自动备份为 config.js.bak），git commit &amp; push 后上线</span>
+        </div>
+        <button id="saveBtn" class="btn primary">保存</button>
+    </div>
+
+    <div class="layout">
+        <nav class="sidebar" id="sidebar"></nav>
+        <main class="content" id="content">
+            <div class="loading">正在加载配置…</div>
+        </main>
+    </div>
+
+    <!-- 图片选择器弹窗 -->
+    <div class="modal-mask" id="pickerMask">
+        <div class="modal">
+            <div class="modal-head">
+                <span class="modal-title">选择图片</span>
+                <div>
+                    <button class="btn small" id="pickerUploadBtn">上传新图片</button>
+                    <button class="btn small" id="pickerCloseBtn">关闭</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="pickerGrid" class="picker-grid"></div>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="uploadInput" accept="image/*" style="display:none">
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
