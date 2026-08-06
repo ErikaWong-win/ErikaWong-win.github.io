@@ -1929,9 +1929,7 @@
 
         function updateToggle() {
             toggle.classList.toggle("active", isAutoScrolling);
-            const icon = toggle.querySelector(".auto-scroll-icon");
             const text = toggle.querySelector(".auto-scroll-text");
-            if (icon) icon.textContent = isAutoScrolling ? "⏸" : "⏵";
             if (text) text.textContent = isAutoScrolling ? "滚动中" : "自动滚动";
         }
 
